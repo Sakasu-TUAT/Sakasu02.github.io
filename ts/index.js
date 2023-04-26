@@ -1,7 +1,8 @@
-var heroSection = document.getElementById('hero');
+"use strict";
+const heroSection = document.getElementById('hero');
 if (heroSection) {
-    var observer = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in');
                 observer.unobserve(entry.target);

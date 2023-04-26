@@ -6,6 +6,7 @@
     <title>About</title>
     <link rel="stylesheet" href="css/style.css" media="screen and (min-width: 769px)">
     <link rel="stylesheet" href="css/style-mobile.css" media="screen and (max-width: 768px)">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
@@ -19,7 +20,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="memo.html">Memo</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="graph.html">Graph</a></li>
       </ul>
     </nav>
   </header>
@@ -29,6 +30,56 @@
       <p>may your coffee be strong and your code be bug-free! </p>
       <a href="#" class="cta-button">Learn More</a>
     </section>
+
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <script src="./js/graph.js"></script>
+    <script>
+          const data = {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [
+          {
+            label: 'My First Dataset',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }
+        ]
+      };
+
+      const options = {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      };
+
+      const ctx = document.getElementById('myChart');
+      const myChart = new Chart(ctx, {
+        type: 'pie',
+        data: data,
+        options: options,
+      });
+    </script>
+
+
+
+
     <section id="services">
       <h2>My Hobbies</h2>
       <ul>
@@ -46,15 +97,16 @@
         </li>
       </ul>        
     </section>
-    <canvas id="myChart"></canvas>
-    <script src="chart.js"></script>
+
+
+
+    
   </main>
   <footer>
     <p>&copy; 2023 Cool Digital Website. All rights reserved.</p>
   </footer>
   <script src="./js/script.js"></script>
   <script src="./ts/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <h1>About Us</h1>
   <p>We are a company that provides high-quality products and services.</p>

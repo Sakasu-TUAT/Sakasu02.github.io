@@ -1,0 +1,29 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sakasu-TUAT/Sakasu02.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sakasu-TUAT/Sakasu02.github.io/issues"
+  },
+  "homepage": "https://github.com/Sakasu-TUAT/Sakasu02.github.io#readme",
+  "devDependencies": {
+    "@types/chart.js": "^2.9.37",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "chart.js": "^4.2.1"
+  }
+}
