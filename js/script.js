@@ -9,3 +9,4 @@ menuBtn.addEventListener('click', () => {
   menuItems.classList.toggle('open');
   menuBtn.classList.toggle('open');
 });
+

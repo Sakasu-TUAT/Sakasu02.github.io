@@ -87,6 +87,12 @@ nav li {
   justify-content: center;
   align-items: center;
   text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#hero.fade-in {
+  opacity: 1;
 }
 
 #hero h1 {

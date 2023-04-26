@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+background-color: #ede5e1;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
+}
+
+header {
+  background-color: #000;
+  color: #000000;
+  padding: 10px 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #ffffff;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+
+.menu-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 5%;
+  background-color: #88dcbc;
+  transition: transform 0.3s ease-in-out;
+  z-index: 0; /*ボタンより下にすべき*/
+} 
+
+.menu-items li {
+  margin: 0 10%;
+}
+
+.menu-items a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.menu-btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  z-index: 1; /* トグルボタンを上層に表示 */
+}
+
+
+@media screen and (max-width: 768px) {
+  .menu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    transition: transform 0.3s ease-in-out;
+    z-index: 0; /*ボタンより下にすべき*/
+  }
+  .menu-items.open {
+    transform: translateX(100%);
+  }
+  
+  .menu-items {
+    transform: translateX(0%);
+  }
+  .menu-items li {
+    margin: 10px 0;
+  }
+  .menu-items a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .menu-btn {
+    display: flex;
+  }
+  .menu-items.open {
+    transform: translateX(100%);
+  }
+
+  .btn-line {
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-btn.open .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-btn.open .btn-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-btn.open .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+  .notes {
+    margin: 50px auto;
+    max-width: 800px;
+  }
+  
+  .notes h1 {
+    text-align: center;
+  }
+  
+  #note-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  #note-text {
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  #notes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .note-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .note-card h2 {
+    margin-top: 0;
+  }
+  
+  .note-card p {
+    margin-bottom: 0;
+  }
+  
+
+#hero {
+  /* background-image: url('../images/degital1.jpg'); */
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #000;
+}
+
+#hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px #000;
+}
+
+#hero a {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+#hero a:hover {
+background-color: #000;
+color: #fff;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #ff5722;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff7043;
+}
+
+#services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  background-color: #0b0a0a;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+.service {
+  flex: 1 1 30%;
+  margin: 20px;
+  text-align: center;
+}
+
+.service h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
